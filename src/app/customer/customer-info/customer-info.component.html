@@ -1,0 +1,32 @@
+<h1>Customer Info Edit</h1>
+<mat-card *ngIf="customer$ | async as customer">
+
+    <mat-card-content>
+        <label>Customer name </label>
+        <input type="text" class="mat-card-content" [(ngModel)]="customer.name">
+    </mat-card-content>
+    <mat-card-content>
+        <label>Customer amount </label>
+        <input type="text" class="mat-card-content" [(ngModel)]="customer.amount">
+    </mat-card-content>
+    <mat-card-content>
+        <label> start time </label>
+        <input type="text" class="mat-card-content" [(ngModel)]="customer.starttime">
+    </mat-card-content>
+    <mat-card-content>
+        <label>end time </label>
+        <input type="text" class="mat-card-content" [(ngModel)]="customer.endtime">
+    </mat-card-content>
+    <mat-card-content>
+        <label>source </label>
+        <input type="text" class="mat-card-content" [(ngModel)]="customer.source">
+    </mat-card-content>
+    <mat-card-content>
+        <label>destination </label>
+        <input type="text" class="mat-card-content" [(ngModel)]="customer.destination">
+    </mat-card-content>
+    <mat-card-actions align="right">
+        <button class="mat-button" (click)="deleteCustomerInfo(customer)"></button>
+    </mat-card-actions>
+
+</mat-card>

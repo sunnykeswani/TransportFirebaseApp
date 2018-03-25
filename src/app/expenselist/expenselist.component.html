@@ -1,0 +1,23 @@
+<!-- <table matSort (matSortChange)="sortCustomerData($event)"> -->
+    <app-toolbar></app-toolbar>
+    <br/>
+<table matSort class="table table-bordered">
+
+  <tr>
+    <th mat-sort-header="vehiclenumber">Vehicle Number </th>
+    <th mat-sort-header="amount">Amount</th>
+    <th mat-sort-header="description">Description</th>
+    <th mat-sort-header="picker">Date</th>
+  </tr>
+
+  <!-- <mat-card *ngIf="customerList | async as customer"> -->
+
+  <tr *ngFor="let expense of list;">
+    <td>{{expense.vehiclenumber}}</td>
+    <td>{{expense.amount}}</td>
+    <td>{{expense.description}}</td>
+    <td>{{expense.date}}</td>
+  </tr>
+
+
+</table>
